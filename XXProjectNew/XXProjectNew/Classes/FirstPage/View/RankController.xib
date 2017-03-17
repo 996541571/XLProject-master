@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankController">
+            <connections>
+                <outlet property="backPress" destination="P5c-dl-JHy" id="lul-qH-t48"/>
+                <outlet property="headerView" destination="T3E-vH-8c2" id="fU1-Ab-bYG"/>
+                <outlet property="table" destination="RZT-F3-9at" id="6Jl-Fq-1P0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="wUy-w7-R9O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RZT-F3-9at" userLabel="table">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3E-vH-8c2" userLabel="headerView">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="业绩&amp;收益排名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-7N-gip" userLabel="rankLab">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="52y-46-Mxa"/>
+                                <constraint firstAttribute="height" constant="35.5" id="EuR-mZ-MUj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="nGy-SO-ygW">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="fQx-IB-eWg"/>
+                                <constraint firstAttribute="width" constant="8" id="uw5-U7-bcD"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-dl-JHy" userLabel="backBtn">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="6KM-Kg-U0k"/>
+                                <constraint firstAttribute="height" constant="30" id="DV0-MW-EFK"/>
+                            </constraints>
+                            <connections>
+                                <action selector="backPress:" destination="-1" eventType="touchUpInside" id="1qT-gk-Bvx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="VGq-7N-gip" firstAttribute="centerY" secondItem="T3E-vH-8c2" secondAttribute="centerY" multiplier="1.33" id="781-Rh-70g"/>
+                        <constraint firstItem="VGq-7N-gip" firstAttribute="centerX" secondItem="T3E-vH-8c2" secondAttribute="centerX" id="C1x-zv-UnI"/>
+                        <constraint firstItem="P5c-dl-JHy" firstAttribute="centerY" secondItem="VGq-7N-gip" secondAttribute="centerY" id="Mun-fG-i7Z"/>
+                        <constraint firstItem="nGy-SO-ygW" firstAttribute="centerY" secondItem="T3E-vH-8c2" secondAttribute="centerY" multiplier="1.33" id="P1e-M4-WtZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RZT-F3-9at" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fyz-hn-bT9"/>
+                <constraint firstItem="T3E-vH-8c2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GA0-tG-pei"/>
+                <constraint firstAttribute="trailing" secondItem="RZT-F3-9at" secondAttribute="trailing" id="HOk-68-9H6"/>
+                <constraint firstAttribute="bottom" secondItem="RZT-F3-9at" secondAttribute="bottom" id="Pkl-vL-79S"/>
+                <constraint firstItem="T3E-vH-8c2" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ebd-ic-saf"/>
+                <constraint firstItem="P5c-dl-JHy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fS6-lr-TsG"/>
+                <constraint firstItem="T3E-vH-8c2" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111" id="fY6-eT-VzQ"/>
+                <constraint firstItem="nGy-SO-ygW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="j9g-Ne-xGW"/>
+                <constraint firstItem="T3E-vH-8c2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oSA-mQ-Pym"/>
+                <constraint firstItem="RZT-F3-9at" firstAttribute="top" secondItem="T3E-vH-8c2" secondAttribute="bottom" constant="-20" id="pqm-4l-YSf"/>
+            </constraints>
+            <point key="canvasLocation" x="378" y="130"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="10" height="19"/>
+    </resources>
+</document>
